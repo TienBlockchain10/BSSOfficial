@@ -65,7 +65,7 @@
               <a href="Contact.html" class="nav-link">Become a Partner!</a>
             </li>
             <li class="nav-item">
-              <a button id="connectButton" class="btn btn-primary">Connect Wallet</a>
+              <a href="https://bssdao.netlify.app/" class="btn btn-primary">Launch App</a>
             </li>
           </ul>
         </div> <!-- .navbar-collapse -->
@@ -592,57 +592,6 @@
 
   <script src="../assets/js/theme.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider"></script>
-  <script>
-    const connectButton = document.getElementById("connectButton");
-
-    async function updateConnectButton() {
-      // Detect if MetaMask is installed
-      const provider = await detectEthereumProvider();
-      if (!provider) {
-        console.log("MetaMask not installed");
-        connectButton.innerHTML = "Connect Wallet";
-        connectButton.disabled = false;
-        return;
-      }
-
-      // Request account access if needed
-      let accounts;
-      try {
-        accounts = await ethereum.request({ method: "eth_requestAccounts" });
-      } catch (err) {
-        console.error(err);
-        return;
-      }
-
-      // Update the connect button
-      if (accounts.length > 0) {
-        const address = accounts[0];
-        const shortenedAddress = `${address.substring(0, 4)}...${address.substring(
-          address.length - 4,
-          address.length
-        )}`;
-        connectButton.innerHTML = shortenedAddress;
-        connectButton.disabled = true;
-      } else {
-        connectButton.innerHTML = "Connect Wallet";
-        connectButton.disabled = false;
-      }
-    }
-
-    connectButton.addEventListener("click", updateConnectButton);
-
-    // Listen for disconnections
-    ethereum.on("accountsChanged", (accounts) => {
-      if (accounts.length > 0) {
-        updateConnectButton();
-      } else {
-        connectButton.innerHTML = "Connect Wallet";
-        connectButton.disabled = false;
-      }
-    });
 
 
   </script>
