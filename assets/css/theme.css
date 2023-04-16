@@ -565,16 +565,19 @@ a.fg-light:focus {
   box-shadow: none;
 }
 
+
+
+
 .btn-secondary {
   color: #fff;
-  background-color: #6D728B;
-  border-color: #6D728B;
+  background: linear-gradient(to right, #0192ff, #00e4ff);
+  border-color: #00e4ff;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #62667d;
-  border-color: #5c6076;
+  background: linear-gradient(to right, #0066cc, #00bfff);
+  border-color: #00bfff;
   -webkit-box-shadow: 0 4px 12px rgba(109, 114, 139, 0.3);
   box-shadow: 0 4px 12px rgba(109, 114, 139, 0.3);
 }
@@ -582,7 +585,7 @@ a.fg-light:focus {
 .btn-secondary:focus,
 .btn-secondary.focus {
   color: #fff;
-  background-color: #7a7f97;
+  background: linear-gradient(to right, #2d91c2, #4cb4d5);
   border-color: #737891;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -591,7 +594,7 @@ a.fg-light:focus {
 .btn-secondary:disabled,
 .btn-secondary.disabled {
   color: #fff;
-  background-color: #6D728B;
+  background: linear-gradient(to right, #0192ff, #00e4ff);
   border-color: #6D728B;
 }
 
@@ -599,7 +602,7 @@ a.fg-light:focus {
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show>.btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #5c6076;
+  background: linear-gradient(to right, #0066cc, #00bfff);
   border-color: #575b6e;
 }
 
@@ -609,6 +612,16 @@ a.fg-light:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 .btn-success {
   color: #fff;
@@ -2980,5 +2993,6 @@ a.fg-light:focus {
 .owl-carousel button.owl-dot.active {
   background-color: #2F89FC;
 }
+
 
 /*# sourceMappingURL=theme.css.map */
